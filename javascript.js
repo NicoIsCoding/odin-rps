@@ -84,9 +84,13 @@ if (playerPoints > computerPoints) {
     alert(`Both players scored ${playerPoints}! It's a DRAW!`)
 }
 
-confirm("Do you wanna play again?") {
-    
-}
+let playAgain = confirm("Do you wanna play again?")
+
+playAgain == true 
+? location.reload() 
+: alert("Thanks for playing!")
+
+
 
 
 
