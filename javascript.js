@@ -7,6 +7,7 @@
 //Check points at the end and declare winner
 
 let computerOptions = ["rock", "paper", "scissors"];
+let computerChoice;
 let playerChoice;
 let computerPoints = 0;
 let playerPoints = 0;
@@ -30,44 +31,34 @@ function gameLogic(player, cpu) {
     if (player == "rock" && cpu == "paper") {
         alert("computer picks paper and BEATS your rock!")
         computerPoints++;
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
 
     } else if (player == "paper" && cpu == "scissors") {
         alert("computer picks scissors and BEATS your paper!")
         computerPoints++;
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`) 
 
     } else if (player == "scissors" && cpu == "rock") {
         alert("computer picks rock and BEATS your scissors!")
         computerPoints++;
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
 
     } else if (player == "rock" && cpu == "scissors") {
         alert("computer picks scissors and you SMASH them with your rock!")
         playerPoints++;
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
 
     } else if (player == "paper" && cpu == "rock") {
         alert("computer picks rock and you SMASH it with your paper!")
         playerPoints++;
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
 
     } else if (player == "scissors" && cpu == "paper"){
         alert("computer picks paper and you SMASH it with your scissors")
         playerPoints++;
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
 
     } else {
         alert(`Computer picks: ${cpu.toUpperCase()} Player picks: ${player.toUpperCase()}! It's a DRAW!`)
-        gameRound++;
-        alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
+
     }
+    
+    gameRound++;
+    alert(`Round: ${gameRound} Cpu: ${computerPoints} points Player: ${playerPoints} points`)
 }
 
 while (gameRound < 5) {
@@ -88,9 +79,13 @@ if (playerPoints > computerPoints) {
 
 } else if (playerPoints < computerPoints) {
     alert(`Computer scored ${computerPoints} out of 5 points and WON the bout!`)
-    
+
 } else {
     alert(`Both players scored ${playerPoints}! It's a DRAW!`)
+}
+
+confirm("Do you wanna play again?") {
+    
 }
 
 
