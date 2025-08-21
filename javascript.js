@@ -88,7 +88,7 @@ const scissors = document.querySelector("#scissors")
 const buttons = document.querySelectorAll("button")
 const body = document.querySelector("body")
 let scoreDisplay = document.querySelector("#score")
-scoreDisplay.textContent = "Click to play!"
+scoreDisplay.textContent = "Click to play!"  
 let scorePara = document.createElement("div")
 body.appendChild(scorePara)
 
